@@ -580,7 +580,6 @@
   <nav>
     <a href="#" class="nav-logo">The Lollipop <span>Coop</span></a>
     <ul class="nav-links">
-      <li><a href="#gallery">Photos</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#events">Events</a></li>
@@ -591,7 +590,6 @@
     </button>
   </nav>
   <nav class="nav-mobile-menu" id="mobileMenu">
-    <a href="#gallery" class="mobile-link">Photos</a>
     <a href="#menu" class="mobile-link">Menu</a>
     <a href="#about" class="mobile-link">About</a>
     <a href="#events" class="mobile-link">Events</a>
@@ -652,53 +650,6 @@
   </div>
 
   <!-- PHOTO GALLERY -->
-  <section id="gallery">
-    <div class="reveal">
-      <p class="section-eyebrow">The Coop in Action</p>
-      <h2 class="section-title">See What We Bring</h2>
-    </div>
-    <div class="gallery-grid reveal">
-
-      <!-- LARGE LEFT — sauced drums hero shot -->
-      <div class="gallery-cell tall">
-        <img
-          src="images/IMG_0973-scaled.webp"
-          alt="Lollipop chicken drumsticks — The Lollipop Coop signature dish"
-          onerror="this.style.display='none'"
-        />
-        <span class="gallery-tag">The Signature Drum</span>
-      </div>
-
-      <!-- TOP RIGHT — trailer exterior -->
-      <div class="gallery-cell short">
-        <img
-          src="images/IMG_7725.webp"
-          alt="The Lollipop Coop red food trailer at an Orlando event"
-          onerror="this.style.display='none'"
-        />
-      </div>
-
-      <!-- BOTTOM RIGHT — placeholder for a future event/action shot -->
-      <div class="gallery-cell short">
-        <div class="gallery-placeholder">
-          <span class="icon">📸</span>
-          <p>More photos coming soon</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 
-      ── HOW TO ADD MORE PHOTOS ───────────────────────────
-      Replace the src="" values above with your own image paths.
-      If you add the images to your GitHub repo in an /images/ folder,
-      use paths like: src="images/trailer-front.jpg"
-      Recommended sizes: large cell ~800×1100px, small cells ~600×450px
-    -->
-  </section>
-
-  <div class="divider"></div>
-
   <!-- MENU -->
   <section id="menu">
     <div class="reveal">
@@ -805,7 +756,20 @@
         <a href="#contact" class="btn-primary" style="margin-top:8px;">Inquire About Booking</a>
       </div>
     </div>
-    <div class="events-cards reveal">
+
+    <!-- Trailer photo + event cards side by side -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,60px); align-items:start; margin-bottom: 0;">
+      <div style="border-radius:4px; overflow:hidden; position:relative;">
+        <img
+          src="images/IMG_7725.webp"
+          alt="The Lollipop Coop red food trailer"
+          style="width:100%; height:100%; object-fit:cover; display:block; border-radius:4px;"
+        />
+        <div style="position:absolute; bottom:14px; left:14px; background:var(--red); color:#fff; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; border-radius:2px;">
+          The Coop on Wheels
+        </div>
+      </div>
+      <div class="events-cards reveal">
       <div class="event-card">
         <div class="event-card-icon">🍺</div>
         <div class="event-card-title">Breweries &amp; Taprooms</div>
@@ -826,6 +790,7 @@
         <div class="event-card-title">Pop-Ups &amp; Special Events</div>
         <p class="event-card-desc">One-off events, grand openings, neighborhood gatherings. If you're drawing a crowd, we want to feed them.</p>
       </div>
+      </div><!-- close grid wrapper -->
     </div>
   </section>
 
@@ -928,7 +893,6 @@
     <div class="footer-top">
       <div class="footer-logo">The Lollipop <span>Coop</span></div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#gallery">Photos</a>
         <a href="#menu">Menu</a>
         <a href="#about">About</a>
         <a href="#events">Events</a>
