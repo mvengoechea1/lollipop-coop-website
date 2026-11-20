@@ -37,6 +37,62 @@
 
   <!-- ── STRUCTURED DATA (JSON-LD) ────────────────────────── -->
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is lollipop chicken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lollipop chicken is a whole chicken drumstick trimmed so the meat is pushed to the top and the clean bone works as a handle. It's a bigger, meatier bite than a wing. We fry each drum and dip it in the sauce of your choice: classics like buffalo, mango habanero, hot honey, and teriyaki."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find The Lollipop Coop food truck in Orlando?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We set up at breweries, festivals, markets, and pop-ups around Orlando and Central Florida. Our schedule changes week to week, and we post where we'll be next on Instagram at @the_lollipop_coop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book The Lollipop Coop for a private or corporate event?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We do company lunches, team events, birthday parties, grand openings, and neighborhood gatherings. We bring the full setup and handle service and cleanup. Fill out the booking form on this page and we'll get back to you within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with breweries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Breweries and taprooms are where we started. Rock Pit Brewing was the first brewery to host us, and we have regular slots available for breweries across Central Florida. Venues can also book us through RosterFlip (rosterflip.com), the scheduling platform we use to manage our bookings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're based in Orlando and travel across the greater Central Florida area for the right events."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What else is on the menu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Along with our signature Lollipop Chicken Drums, we serve Philly Fries, Coop Toston, Mac & Cheese Balls, Mozzarella Sticks, and fries with rotating sides. The menu can vary by event."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FoodEstablishment",
@@ -499,6 +555,23 @@
       .events-intro { grid-template-columns: 1fr; gap: 24px; }
     }
 
+    /* ── FAQ ───────────────────────────────────────────── */
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 20px; margin-top: 12px;
+    }
+    .faq-item {
+      background: var(--ash); border-radius: var(--radius);
+      padding: 28px 24px; border-left: 3px solid var(--gold);
+    }
+    .faq-q {
+      font-family: var(--font-display); font-weight: 400;
+      font-size: 1.4rem; color: var(--cream); margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+    .faq-a { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    @media (max-width: 720px) { .faq-grid { grid-template-columns: 1fr; } }
+
     /* ── INSTAGRAM ─────────────────────────────────────── */
     .insta-strip {
       background: var(--charcoal);
@@ -771,10 +844,13 @@
       <p class="section-eyebrow">Our Story</p>
       <h2 class="section-title">Chicken Doesn't Have to Be Small</h2>
       <p class="section-body">
-        The Lollipop Coop was built around one idea: give people something bigger, juicier, and more satisfying than a wing. We take whole drumsticks, prepare them lollipop-style, and build every menu item to hit harder and eat cleaner than anything else at the event.
+        The Lollipop Coop started with a conversation in the car. Mike and Melissa were wishing oversized chicken wings existed. He's a drum guy, she's a flats person, so they always split an order perfectly. But wing prices had climbed to $16 to $18 for eight or ten wings, and it never felt like enough meat for the money.
       </p>
       <p class="section-body" style="margin-top:16px;">
-        Blending street-style energy with a premium finish, we show up ready — for breweries, festivals, corporate events, and any crowd that's hungry for real food.
+        Looking for bigger wings, Mike found lollipop chicken instead. He took a drumstick, fried it, sauced it, and that was it. The meat sits at the top in one big bite, the sauce gets dipped from the bowl, and the clean bone stays behind as a handle so your hands don't get messy.
+      </p>
+      <p class="section-body" style="margin-top:16px;">
+        Neither of them had any kitchen or food-truck experience. They found a never-used trailer, bought it, and learned everything on the job. Rock Pit Brewing was the first brewery to host the Coop, and today we serve breweries, festivals, corporate events, and community gatherings across Orlando and Central Florida.
       </p>
       <ul class="about-list">
         <li class="about-list-item">
@@ -854,6 +930,42 @@
         <p class="event-card-desc">One-off events, grand openings, neighborhood gatherings. If you're drawing a crowd, we want to feed them.</p>
       </div>
       </div><!-- close grid wrapper -->
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="reveal">
+      <p class="section-eyebrow">Questions</p>
+      <h2 class="section-title">Lollipop Chicken FAQ</h2>
+    </div>
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <h3 class="faq-q">What is lollipop chicken?</h3>
+        <p class="faq-a">Lollipop chicken is a whole chicken drumstick trimmed so the meat is pushed to the top and the clean bone works as a handle. It&#x27;s a bigger, meatier bite than a wing. We fry each drum and dip it in the sauce of your choice: classics like buffalo, mango habanero, hot honey, and teriyaki.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Where can I find The Lollipop Coop food truck in Orlando?</h3>
+        <p class="faq-a">We set up at breweries, festivals, markets, and pop-ups around Orlando and Central Florida. Our schedule changes week to week, and we post where we&#x27;ll be next on Instagram at @the_lollipop_coop.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Can I book The Lollipop Coop for a private or corporate event?</h3>
+        <p class="faq-a">Yes. We do company lunches, team events, birthday parties, grand openings, and neighborhood gatherings. We bring the full setup and handle service and cleanup. Fill out the booking form on this page and we&#x27;ll get back to you within 24 hours.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Do you work with breweries?</h3>
+        <p class="faq-a">Breweries and taprooms are where we started. Rock Pit Brewing was the first brewery to host us, and we have regular slots available for breweries across Central Florida. Venues can also book us through <a href="https://rosterflip.com" target="_blank" rel="noopener" style="color:var(--gold);">RosterFlip</a>, the scheduling platform we use to manage our bookings.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What areas do you serve?</h3>
+        <p class="faq-a">We&#x27;re based in Orlando and travel across the greater Central Florida area for the right events.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What else is on the menu?</h3>
+        <p class="faq-a">Along with our signature Lollipop Chicken Drums, we serve Philly Fries, Coop Toston, Mac &amp; Cheese Balls, Mozzarella Sticks, and fries with rotating sides. The menu can vary by event.</p>
+      </div>
     </div>
   </section>
 
